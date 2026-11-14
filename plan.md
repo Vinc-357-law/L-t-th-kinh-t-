@@ -12,7 +12,7 @@ Game ôn thuật ngữ Kinh tế vi mô (theo giáo trình *Nguyên lý Kinh t�
 | 2 | Phân tích: chốt yêu cầu | ✅ Xong, đã duyệt 8 thuật ngữ và 2 điểm phát sinh (nhóm còn dò lại định nghĩa với sách) |
 | 3 | Thiết kế giao diện | ✅ Đã duyệt; bản Word `Thiet_ke_giao_dien.docx` gửi nhóm góp ý |
 | 4 | Viết code (v1.0) | ✅ Xong (14/11/2026): `index.html`, link chia sẻ https://claude.ai/artifact/PhhJxuAJgr97w6EUCL1jvm |
-| 5 | Chạy thử và sửa lỗi | 🟡 Đang chờ nhóm chơi thử và góp ý |
+| 5 | Chạy thử và sửa lỗi | 🟡 Đã ra bản 1.1 (phạt 10 giây khi ghép sai); chờ nhóm chơi thử và góp ý |
 | 6 | Hoàn thiện tài liệu | ⬜ Chưa làm |
 
 ## Yêu cầu đã chốt (giai đoạn 2)
@@ -23,7 +23,7 @@ Game ôn thuật ngữ Kinh tế vi mô (theo giáo trình *Nguyên lý Kinh t�
 | 2 | Cách tính lượt | Mỗi lần lật 2 thẻ tính 1 lượt, kể cả đúng hay sai |
 | 3 | Đồng hồ | Đếm ngược 5 phút |
 | 4 | Thời gian thẻ sai còn ngửa | 1 giây |
-| 5 | Màn chúc mừng | Chỉ hiện số lượt và thời gian |
+| 5 | Màn chúc mừng | Số lượt và thời gian; từ bản 1.1 thêm số lần sai |
 | 6 | Kỷ lục | Nhập tên nhân vật lúc bắt đầu để tính điểm (xem điểm phát sinh A) |
 | 7 | Âm thanh | Không có |
 | 8 | Thiết bị | Laptop và điện thoại |
@@ -35,6 +35,14 @@ Game ôn thuật ngữ Kinh tế vi mô (theo giáo trình *Nguyên lý Kinh t�
 
 - **A. Nhập tên và ràng buộc "không thu thập tên":** dùng *biệt danh*, không bắt buộc tên thật. Biệt danh chỉ lưu trong trình duyệt của máy đang chơi (localStorage), không gửi đi đâu.
 - **B. Cách xếp hạng:** chỉ xếp hạng ván ghép đủ 8 cặp trước khi hết giờ. Ít lượt hơn xếp trên; bằng lượt thì ván nhanh hơn xếp trên. Lưu 10 ván tốt nhất trên máy.
+
+### Yêu cầu bổ sung cho bản 1.1 (đã duyệt)
+
+- Mỗi lần **ghép sai cặp** bị trừ 10 giây trên đồng hồ đếm ngược. Lần đó vẫn tính 1 lượt.
+- Khi bị phạt, cạnh đồng hồ hiện "−10 giây" và đồng hồ nháy đỏ. Còn dưới 10 giây mà ghép sai thì ván kết thúc ngay (Hết giờ).
+- Thời gian ghi nhận khi thắng = thời gian chơi thực + thời gian bị phạt. Bảng xếp hạng dùng con số này.
+- Màn kết quả hiện thêm số lần sai, ví dụ "3 (−30s)".
+- Bảng xếp hạng của bản 1.0 bị xóa vì không so được với ván có phạt.
 
 ### 8 thuật ngữ (đã duyệt)
 
@@ -60,6 +68,7 @@ Game ôn thuật ngữ Kinh tế vi mô (theo giáo trình *Nguyên lý Kinh t�
 | Phiên bản | Ngày | Thay đổi / lỗi đã sửa | Ai phát hiện |
 |---|---|---|---|
 | 1.0 | 14/11/2026 | Bản đầu tiên: màn bắt đầu (biệt danh, cách chơi, bảng xếp hạng), lưới 4×4 trên laptop và 2 cột trên điện thoại, đếm ngược 5 phút, màn kết quả khi thắng và khi hết giờ, bảng xếp hạng top 10 trên máy | — |
+| 1.1 | 14/11/2026 | Yêu cầu bổ sung: ghép sai bị trừ 10 giây, hiện "−10 giây" cạnh đồng hồ; thời gian ghi nhận cộng phạt; màn kết quả thêm ô "Lần sai"; cách chơi thêm dòng về phạt; xóa bảng xếp hạng bản 1.0 | Người đặt hàng |
 
 ### Kiểm tra trên bản 1.0
 
